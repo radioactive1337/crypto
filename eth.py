@@ -1,4 +1,3 @@
-
 from typing import Optional
 from hdwallet import BIP44HDWallet
 from hdwallet.cryptocurrencies import EthereumMainnet
