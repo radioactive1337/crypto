@@ -13,6 +13,7 @@ sheet['C1'] = "Private key"
 
 # Number of wallets
 N = int(input("Enter number of wallets: "))
+path = str(input("Enter the folder path for csv: "))
 
 for i in range(N):
     MNEMONIC: str = generate_mnemonic(language="english", strength=128)
@@ -32,5 +33,5 @@ for i in range(N):
     sheet.cell(row=i + 2, column=3).value = bip44_hdwallet.private_key()
     bip44_hdwallet.clean_derivation()
 
-book.save("D:/eth.accs/MM.xlsx")
+book.save(f"{path}/wallets.xlsx")
 book.close()
